@@ -1,23 +1,35 @@
-const windowScrollThreshold = 100; // Umbral de desplazamiento para activar el cambio
-const toggleSwitch = document.querySelector('.comic-button');
-const comicButton = document.querySelector('.comic-button');
-const container = document.querySelector('.container');
+const comicButtons = document.querySelectorAll('.comic-button');
 
-window.addEventListener("scroll", function() {
-    if (window.scrollY > window.innerHeight) {
-        comicButton.classList.add("scrolled-down");
-        container.classList.add("scrolled-down");
-    } else {
-        comicButton.classList.remove("scrolled-down");
-        container.classList.remove("scrolled-down");
-    }
+comicButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        document.body.classList.toggle("background-white");
+        toggleContentVisibility();
+    });
 });
 
-toggleSwitch.addEventListener("click", function() {
+function toggleContentVisibility() {
     const body = document.body;
-    if (body.classList.contains("background-white")) {
-        body.classList.remove("background-white");
+    const isWhiteBackground = body.classList.contains("background-white");
+    const quienSoy = document.querySelector('.quiensoy');
+    const quienSoyInformatico = document.querySelector('.quiensoy-informatico');
+
+    if (isWhiteBackground) {
+        quienSoy.style.display = "flex";
+        quienSoyInformatico.style.display = "none";
     } else {
-        body.classList.add("background-white");
+        quienSoy.style.display = "none";
+        quienSoyInformatico.style.display = "flex";
     }
+}
+
+
+
+window.addEventListener("scroll", function() {
+    comicButtons.forEach(button => {
+        if (window.scrollY > window.innerHeight) {
+            button.classList.add("scrolled-down");
+        } else {
+            button.classList.remove("scrolled-down");
+        }
+    });
 });

@@ -2,63 +2,50 @@ body {
   margin: 0;
   font-weight: bold;
   background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: "Arial", sans-serif; /* Ejemplo: Arial como primera opción y fuentes sans-serif como alternativa */
 }
 
 body.background-white {
-  background-color: white; 
+  background-color: white;
+  color: black;
 }
 
 /* ----------------------------------------INTRODUCION-NORMAL------------------------------------------------------------------------------------------------------------------------- */
 
-.container {
+.container, .container-informatico {
   position: relative;
-  height: 100vh; /* Ajustar la altura del contenedor principal */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centrar verticalmente el contenido */
+  justify-content: center; 
 }
-
-.background-black .container {
-  display: none; /* Ocultar la foto cuando el fondo es negro */
-}
-
-.background-white .container {
-  display: block; /* Mostrar la foto cuando el fondo es blanco */
-}
-
-/* ----------------------------------------INTRODUCION-INFORMATICO------------------------------------------------------------------------------------------------------------------------- */
 
 .container-informatico {
-  position: relative;
-  height: 100vh; /* Ajustar la altura del contenedor principal */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Centrar verticalmente el contenido */
-  color: white;
-}
-
-.background-black .container-informatico {
-  display: block; /* Ocultar la foto cuando el fondo es negro */
-}
-
-.background-white .container-informatico {
-  display: none; /* Mostrar la foto cuando el fondo es blanco */
-}
-
-/* ----------------------------------QUIEN SOY NOMAL-------------------------------------------------------------------------------------------------------------------------- */
-.background-black .quiensoy {
   display: none;
 }
 
-.background-white .quiensoy {
-  display: block;
+.background-black .container-informatico {
+  display: flex;
 }
 
-.quiensoy {
+.background-white .container {
   display: flex;
-  height: 50vh;
+}
+
+.background-black .container {
+  display: none;
+}
+
+.text-content {
+  text-align: center;
+}
+
+/* ----------------------------------QUIEN SOY -------------------------------------------------------------------------------------------------------------------------- */
+.quiensoy, .quiensoy-informatico {
+  display: flex;
+  height: 100vh; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -66,86 +53,72 @@ body.background-white {
   width: 100%;
 }
 
-#contenido-quien-soy {
+.background-white .quiensoy {
   display: flex;
-  align-items: center;
-  width: 100%;
 }
 
-#foto-quien-soy,
-#texto-quien-soy {
-  width: 100%; /* Cada elemento ocupa el 100% del ancho del contenedor padre */
-  margin-bottom: 20px; /* Espacio entre la foto y el texto */
-}
-
-#texto-quien-soy{
-  margin-right: 120px;
-}
-
-#foto-mia {
-  border-radius: 15px;
-  max-width: 500px; /* Ancho máximo de la foto */
-  margin-right: 20px; /* Espacio a la derecha de la foto */
-}
-
-.background-black #foto-quien-soy {
-  display: none; /* Ocultar la foto cuando el fondo es negro */
-}
-
-.background-white #foto-quien-soy {
-  display: block; /* Mostrar la foto cuando el fondo es blanco */
-}
-
-/* ----------------------------------QUIEN SOY INFORMATICO-------------------------------------------------------------------------------------------------------------------- */
-
-.background-black .quiensoy-informatico {
-  display: block;
+.background-black .quiensoy {
+  display: none;
 }
 
 .background-white .quiensoy-informatico {
   display: none;
 }
 
-.quiensoy-informatico {
-  color: white;
+.background-black .quiensoy-informatico {
   display: flex;
-  height: 50vh;
-  flex-direction: column;
-  align-items: center;
+}
+
+#contenido-quien-soy, #contenido-quien-soy-informatico {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: flex-start; /* Cambiado para alinear elementos al inicio */
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+.content {
+  display: flex;
   justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-#contenido-quien-soy-informatico {
-  display: flex;
   align-items: center;
-  width: 100%;
 }
 
-#foto-quien-soy-informatico,
-#texto-quien-soy-informatico {
-  width: 100%; /* Cada elemento ocupa el 100% del ancho del contenedor padre */
-  margin-bottom: 20px; /* Espacio entre la foto y el texto */
+.foto-columna {
+  flex: 1;
+  padding: 20px;
 }
 
-#texto-quien-soy-informatico{
-  margin-right: 120px;
+.texto-columna {
+  flex: 1;
+  padding: 20px;
 }
 
-#foto-mia-informatico {
+#foto-mia, #foto-mia-informatico {
+  max-width: 100%;
   border-radius: 15px;
-  max-width: 500px; /* Ancho máximo de la foto */
-  margin-right: 20px; /* Espacio a la derecha de la foto */
+  transition: 1s;
 }
 
-.background-black #foto-quien-soy-informatico {
-  display: block; /* Ocultar la foto cuando el fondo es negro */
+#foto-mia:hover, #foto-mia-informatico:hover {
+  margin-top: -10px;
+  transition: 1s;
+  margin-bottom: 10px;
+  box-shadow: 10px 10px 15px #999999;
 }
 
-.background-white #foto-quien-soy-informatico {
-  display: none; /* Mostrar la foto cuando el fondo es blanco */
+#instagram, #linkedin {
+  max-width: 100%;
+  filter: grayscale(100%); 
+  transition: 0.5s ease; 
+  height: 50px;
+
 }
+
+#instagram:hover, #linkedin:hover {
+  filter: grayscale(0%); 
+}
+
 
 /* ----------------------------------------BOTON------------------------------------------------------------------------------------------------------------------------------ */
 
@@ -163,11 +136,9 @@ body.background-white {
   transition: all 0.3s ease;
   cursor: pointer;
   width: 120px;
-  margin: auto; /* Centrar horizontalmente */
-  margin-top: 20px; /* Espacio superior */
+  margin: 20px auto; 
 }
 
-/* Estilos adicionales para el botón cuando el fondo es negro */
 .background-black .comic-button {
   background-color: #ffffff;
   color: #000000;
@@ -182,7 +153,6 @@ body.background-white {
   box-shadow: 3px 3px 0px #ffffff;
 }
 
-/* Estilos adicionales para el botón cuando el fondo es blanco */
 .background-white .comic-button {
   background-color: #000;
   color: #fff;
@@ -197,9 +167,9 @@ body.background-white {
   box-shadow: 3px 3px 0px #000;
 }
 
-.scrolled-down .comic-button {
+.scrolled-down {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 1000; 
 }
-
