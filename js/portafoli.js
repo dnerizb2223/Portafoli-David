@@ -8,21 +8,18 @@ comicButtons.forEach(button => {
 });
 
 function toggleContentVisibility() {
-    const body = document.body;
-    const isWhiteBackground = body.classList.contains("background-white");
-    const quienSoy = document.querySelector('.quiensoy');
-    const quienSoyInformatico = document.querySelector('.quiensoy-informatico');
+    const isWhiteBackground = document.body.classList.contains("background-white");
+    const whiteContent = document.querySelectorAll('.container, .quiensoy-cualidades');
+    const blackContent = document.querySelectorAll('.container-informatico, .quiensoy-informatico');
 
-    if (isWhiteBackground) {
-        quienSoy.style.display = "flex";
-        quienSoyInformatico.style.display = "none";
-    } else {
-        quienSoy.style.display = "none";
-        quienSoyInformatico.style.display = "flex";
-    }
+    whiteContent.forEach(content => {
+        content.style.display = isWhiteBackground ? "flex" : "none";
+    });
+
+    blackContent.forEach(content => {
+        content.style.display = isWhiteBackground ? "none" : "flex";
+    });
 }
-
-
 
 window.addEventListener("scroll", function() {
     comicButtons.forEach(button => {
@@ -33,3 +30,6 @@ window.addEventListener("scroll", function() {
         }
     });
 });
+
+// Initial toggle to ensure correct visibility on load
+toggleContentVisibility();
