@@ -3,7 +3,8 @@ body {
   font-weight: bold;
   background-color: rgb(0, 0, 0);
   color: white;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 20px
 }
 
 body.background-white {
@@ -253,28 +254,6 @@ body.background-white {
   justify-content: center;
 }
 
-.experiencia-item {
-  display: inline-block;
-  margin: 0 20px; /* Agrega un margen entre las experiencias */
-  text-align: center;
-  padding: 100px;
-}
-
-.experiencia-item img {
-  height: 300px;
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-
-.experiencia-item h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.experiencia-item p {
-  font-size: 18px;
-}
-
 
 /* --------------------------------------------------- */
 
@@ -341,7 +320,8 @@ body.background-white {
 }
 
 .experiencia-informatico {
-  margin: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   text-align: center;
   height: 80vh;
   align-items: center;
@@ -366,6 +346,7 @@ body.background-white {
 
 .experiencia-item img {
   height: 300px;
+  width: 500px;
   border-radius: 15px;
   margin-bottom: 10px;
 }
