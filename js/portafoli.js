@@ -31,5 +31,4 @@ window.addEventListener("scroll", function() {
     });
 });
 
-// Initial toggle to ensure correct visibility on load
 toggleContentVisibility();
