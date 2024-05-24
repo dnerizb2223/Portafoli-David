@@ -46,12 +46,13 @@ body.background-white {
   min-height: 100vh; /* Ensure full height of viewport */
   padding: 20px 0; /* Add some vertical padding */
   box-sizing: border-box;
-
+  font-size: 17px;
 }
 
 .quien-soy, .cualidades {
   flex: 1;
-  padding: 20px;
+  margin: 20px;
+  padding: 10px;
   height: 600px;
 }
 
@@ -87,16 +88,17 @@ body.background-white {
   box-shadow: 10px 10px 15px #7e7e7e;
 }
 
-#instagram, #linkedin {
+#instagram, #linkedin, #github {
   max-width: 100%;
   filter: grayscale(100%); 
   transition: 0.5s ease; 
   height: 50px;
 }
 
-#instagram:hover, #linkedin:hover {
+#instagram:hover, #linkedin:hover, #github:hover {
   filter: grayscale(0%); 
 }
+
 
 .comic-button {
   padding: 8px 16px;
@@ -216,6 +218,7 @@ body.background-white {
   border-radius: 15px;
   transition: 1s;
   height: 500px;
+  border: #a4a4a4 solid 1px;
 }
 
 .imagen-deslizable > img:hover {
@@ -239,6 +242,7 @@ body.background-white {
 
 .experiencia {
   margin: 100px;
+  margin-bottom: 200px;
   text-align: center;
   height: 80vh;
   align-items: center;
@@ -320,8 +324,8 @@ body.background-white {
 }
 
 .experiencia-informatico {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px;
+  margin-bottom: 200px;
   text-align: center;
   height: 80vh;
   align-items: center;
@@ -400,21 +404,7 @@ body.background-white {
   padding: 20px;
 }
 
-/* Estilos para el footer blanco */
-.footer-white {
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding: 20px;
-}
 
-/* Estilos para el footer negro */
-.footer-black {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
 
 
 .background-black .footer-black,
