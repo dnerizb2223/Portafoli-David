@@ -521,3 +521,36 @@ transition: 0.5s;
   transition: 0.5s;
 
 }
+
+.background-black .habilidades-informatico {
+  display: block; /* Oculta los elementos cuando el fondo es negro */
+}
+
+.background-white .habilidades-informatico {
+  display: none; /* Oculta los elementos cuando el fondo es negro */
+}
+
+.background-black .hoobies {
+  display: none; /* Oculta los elementos cuando el fondo es negro */
+}
+
+.background-white .hoobies {
+  display: block; /*v Oculta los elementos cuando el fondo es negro */
+}
+
+.hoobies{
+  text-align: center;
+  height: 100vh;
+
+}
+
+.habilidades-informatico{
+  position: relative;
+  text-align: center;
+  display:inline-block;
+  height: 100vh;
+}
+
+.habilidades-informatico img{
+  width: 100px;
+}
