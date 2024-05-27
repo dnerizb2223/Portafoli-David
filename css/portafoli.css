@@ -540,17 +540,24 @@ transition: 0.5s;
 
 .hoobies{
   text-align: center;
-  height: 100vh;
+  height: 70vh;
+}
 
+.hoobies img{
+  margin: 20px;
+  width: 250px;
+  height: auto;
 }
 
 .habilidades-informatico{
   position: relative;
   text-align: center;
   display:inline-block;
-  height: 100vh;
+  height: 70vh;
 }
 
 .habilidades-informatico img{
-  width: 100px;
+  margin: 20px;
+  width: 250px;
+  height: auto;
 }
